@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GamerZone - Tu Mundo Gaming</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>GamerZone</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#popular-games">Juegos Populares</a></li>
+                <li><a href="#news">Noticias</a></li>
+                <li><a href="#reviews">Reseñas</a></li>
+                <li><a href="#products">Productos</a></li>
+                <li><a href="#anime-shirts">Camisas Anime/Games</a></li>
+                <li><a href="#anime-figures">Muñecos Anime/Games</a></li>
+                <li><a href="#faq">Preguntas Frecuentes</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar juegos, productos o noticias...">
+        </div>
+    </header>
+
+      
+    <main>
+        <!--Botón Carrito de Compras-->
+        <div class="container-fluid">
+            <button type="button" class="btn btn-primary position-fixed mt-3 me-4 end-0 p-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
+                    <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l.5 2H5V5zM6 5v2h2V5zm3 0v2h2V5zm3 0v2h1.36l.5-2zm1.11 3H12v2h.61zM11 8H9v2h2zM8 8H6v2h2zM5 8H3.89l.5 2H5zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"/>
+                </svg>
+            </button>
+        </div>
+        <!--Modal carrito de compras-->
+        <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">CARRITO DE COMPRAS</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carrito">
+                        <ul id="lista-productos"></ul>
+                    </div>
+                    <div id="total-carrito">Total: $0.00</div>
+                    <br>
+                    <div class="footer-bottom">
+                        <p>&copy; 2024 GamerZone. Todos los derechos reservados.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Confirmar</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        <!-- Main Section -->
+        <section id="home" class="banner">
+            <h1 id="titulo_principal">Bienvenido a Jurassic Game Store <br>
+                Tu Mundo Gaming</h1>
+            <h2 id="subtitulo_principal">Explora lo mejor del mundo gaming con reseñas, noticias y productos exclusivos</h2>
+        </section>
+
+        <!-- Juegos Populares -->
+        <section id="popular-games" class="section">
+            <h2>Juegos Populares</h2>
+            <div class="games-grid">
+                <div class="game-item">
+                    <img src="https://i.blogs.es/1c518c/resident-evil-4-playstation-xbox-pc/1366_2000.jpeg" alt="Resident Evil 4">
+                    <p><strong>Resident Evil 4 (Remake)</strong><br> Un clásico del survival horror reinventado con gráficos de última generación y jugabilidad mejorada.</p>
+                </div>
+                <div class="game-item">
+                    <img src="https://i.ytimg.com/vi/CtDSnU4RlYQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDUp0td_E1NsJsSF5ExwvS0kHLpKA" alt="Final Fantasy VII Remake">
+                    <p><strong>Final Fantasy VII (Remake)</strong><br> Una épica historia de fantasía y ciencia ficción que redefine el género de los JRPG.</p>
+                </div>
+                <div class="game-item">
+                    <img src="https://i.pinimg.com/originals/3a/1b/fa/3a1bfa3713149a87e7aa21133fb84580.jpg" alt="God of War">
+                    <p><strong>God of War (PS4)</strong><br> La aventura mitológica de Kratos y su hijo Atreus en un mundo lleno de dioses y monstruos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Noticias -->
+        <section id="news" class="section">
+            <h2>Últimas Noticias</h2>
+            <div class="news-grid">
+                <article class="news-item">
+                    <h3>Lanzamiento de la PS5 Slim</h3>
+                    <p>Sony ha anunciado el lanzamiento de una nueva versión más compacta de la PS5, con las mismas capacidades gráficas, pero un diseño más pequeño y eficiente.</p>
+                </article>
+                <article class="news-item">
+                    <h3>Nuevo parche de Cyberpunk 2077</h3>
+                    <p>El último parche de Cyberpunk 2077 ha solucionado más de 100 bugs y añade nuevas misiones, mejorando considerablemente la experiencia del jugador.</p>
+                </article>
+                <article class="news-item">
+                    <h3>Xbox Game Pass amplía su catálogo</h3>
+                    <p>Microsoft anunció la incorporación de títulos como *Elden Ring* y *Halo Infinite* en el catálogo de Xbox Game Pass para los suscriptores.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Reseñas -->
+        <section id="reviews" class="section">
+            <h2>Reseñas de Juegos</h2>
+            <div class="reviews-grid">
+                <article class="review-item">
+                    <h3>Resident Evil 4 - Remake</h3>
+                    <p>Calificación: <strong>9/10</strong><br> Un remake fenomenal que recupera la esencia del original con mejoras gráficas y una jugabilidad más fluida.</p>
+                </article>
+                <article class="review-item">
+                    <h3>Final Fantasy VII - Remake</h3>
+                    <p>Calificación: <strong>9.5/10</strong><br> El clásico juego de rol que marcó a toda una generación regresa con un toque moderno, gráficos espectaculares y una narrativa profunda.</p>
+                </article>
+                <article class="review-item">
+                    <h3>The Legend of Zelda: Breath of the Wild</h3>
+                    <p>Calificación: <strong>10/10</strong><br> Un juego revolucionario que redefine la exploración en mundo abierto. Indispensable para cualquier amante de los videojuegos.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Productos -->
+        <section id="products" class="section">
+            <h2>Línea de Productos</h2>
+            <div class="products-grid">
+                <div class="product-item" data-name="Controlador Inalámbrico Pro" data-description="Compatible con PC, PS5 y Xbox." data-price="100000">
+                    <img src="https://st2.depositphotos.com/34353014/42948/i/450/depositphotos_429480174-stock-photo-riga-latvia-november-2020-new.jpg" alt="Controlador Inalámbrico">
+                    <p><strong>Controlador Inalámbrico Pro</strong><br> Compatible con PC, PS5 y Xbox. - <strong>$100.000</strong></p>
+                    <button class="select-product">Seleccionar</button>
+                </div>
+                <div class="product-item" data-name="Auriculares Gaming 7.1" data-description="Sonido envolvente para una experiencia inmersiva." data-price="200000">
+                    <img src="https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MP_99509905/fee_786_587_png" alt="Auriculares Gaming">
+                    <p><strong>Auriculares Gaming 7.1</strong><br> Sonido envolvente para una experiencia inmersiva. - <strong>$200.000</strong></p>
+                    <button class="select-product">Seleccionar</button>
+                </div>
+                <div class="product-item" data-name="Monitor 4K Ultra HD" data-description="Diseñado para una visualización perfecta en 4K." data-price="300000">
+                    <img src="https://www.wepc.com/wp-content/uploads/2019/05/DSC02079-1-scaled.jpg" alt="Monitor 4K Gaming">
+                    <p><strong>Monitor 4K Ultra HD</strong><br> Diseñado para una visualización perfecta en 4K. - <strong>$300.000</strong></p>
+                    <button class="select-product">Seleccionar</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- NUEVA SECCIÓN: Camisas de Anime y Videojuegos -->
+        <section id="anime-shirts" class="section">
+            <h2>Camisas de Anime y Videojuegos</h2>
+            <div class="shirts-grid">
+                <div class="shirt-item" data-name="Camisa Dragon Ball Z" data-description="Estilo casual con estampado de Goku." data-price="50000">
+                    <img src="https://www.mandragorastore.com/wp-content/uploads/2022/05/Dragon-Ball-Z-Goku-Fase-3-men.jpg" alt="Camisa de Dragon Ball">
+                    <p><strong>Camisa Dragon Ball Z</strong><br> Estilo casual con estampado de Goku. - <strong>$50.000</strong></p>
+                    <button class="select-product">Seleccionar</button>
+                </div>
+                <div class="shirt-item" data-name="Camisa The Legend of Zelda" data-description="Diseño exclusivo inspirado en el emblema de la Trifuerza." data-price="60000">
+                    <img src="https://www.mandragorastore.com/wp-content/uploads/2023/04/The-Legend-of-Zelda-Princesa-Tears-of-the-Kingdom-men.jpg" alt="Camisa de Zelda">
+                    <p><strong>Camisa The Legend of Zelda</strong><br> Diseño exclusivo inspirado en el emblema de la Trifuerza. - <strong>$60.000</strong></p>
+                    <button class="select-product">Seleccionar</button>
+                </div>
+                <div class="shirt-item" data-name="Camisa Attack on Titan" data-description="Con el logo del Cuerpo de Exploración." data-price="55000">
+                    <img src="https://www.mandragorastore.com/wp-content/uploads/2023/02/Attack-on-Titan-Eren-Titan-Fundador-men-OKK.jpg" alt="Camisa de Attack on Titan">
+                    <p><strong>Camisa Attack on Titan</strong><br> Con el logo del Cuerpo de Exploración. - <strong>$55.000</strong></p>
+                    <button class="select-product">Seleccionar</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- NUEVA SECCIÓN: Muñecos de Anime y Videojuegos -->
+        <section id="anime-figures" class="section anime-figures">
+            <h2>Muñecos de Anime y Videojuegos</h2>
+            <div class="figures-grid">
+                <div class="figure-item" data-name="Goku Ultra Instinct" data-description="Detalles increíbles y pose dinámica." data-price="120000">
+                    <img src="https://images.squarespace-cdn.com/content/v1/606d97a75b3be368c827bd18/1618316146652-MOFZQ1HJ64YUSAWZTZD3/PXL_20210327_225353019.jpg?format=1500w" alt="Figura de Goku Ultra Instinct">
+                    <p><strong>Goku Ultra Instinct</strong><br> Detalles increíbles y pose dinámica. - <strong>$120.000</strong></p>
+                    <button class="select-product">Seleccionar</button>
+                </div>
+                <div class="figure-item" data-name="Link Breath of the Wild" data-description="Ideal para fans de Zelda." data-price="130000">
+                    <img src="https://static.zerochan.net/Link.%28Breath.of.the.Wild%29.full.3249015.jpg" alt="Figura de Link Breath of the Wild">
+                    <p><strong>Link Breath of the Wild</strong><br> Ideal para fans de Zelda. - <strong>$130.000</strong></p>
+                    <button class="select-product">Seleccionar</button>
+                </div>
+                <div class="figure-item" data-name="Eren Attack on Titan" data-description="Con detalles del Titán de Ataque." data-price="110000">
+                    <img src="https://m.media-amazon.com/images/I/51+2SvR6N6L._AC_UF1000,1000_QL80_.jpg" alt="Figura de Eren Attack on Titan">
+                    <p><strong>Eren Attack on Titan</strong><br> Con detalles del Titán de Ataque. - <strong>$110.000</strong></p>
+                    <button class="select-product">Seleccionar</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- NUEVA SECCIÓN: Preguntas Frecuentes -->
+        <section id="faq" class="section faq-section">
+            <h2>Preguntas Frecuentes</h2>
+            <div class="faq-item">
+                <h3>¿Cómo puedo realizar un pedido?</h3>
+                <p>Para realizar un pedido, simplemente navega por nuestros productos y selecciona el que deseas comprar. Añádelo a tu carrito y sigue las instrucciones para completar tu compra.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Ofrecen envíos internacionales?</h3>
+                <p>Sí, hacemos envíos a todo el mundo. Los costos de envío y tiempos de entrega varían según el destino.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Puedo devolver un producto?</h3>
+                <p>Si no estás satisfecho con tu compra, puedes devolver el producto dentro de los 30 días posteriores a la entrega. Asegúrate de que el producto esté en su estado original.</p>
+            </div>
+        </section>
+
+        <!-- NUEVA SECCIÓN: Formulario de Contacto -->
+        <section id="contact" class="section contact-section">
+            <h2>Contacto</h2>
+            <form action="enviar_mensaje.php" method="POST" class="contact-form">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </section>
+
+
+        <section id="about-us">
+            <div class="about-image">
+                <img src="./img/quienesSomos.jpg" alt="Equipo de GamerZone">
+            </div>
+
+            <div class="about-container">
+                <div class="about-content">
+                    <h1>¿Quiénes Somos?</h1>
+                    <p>GamerZone nació de la pasión por los videojuegos y el deseo de crear una comunidad en la que los jugadores puedan encontrar noticias, reseñas y análisis detallados de sus juegos favoritos. Nos dedicamos a brindar la mejor experiencia posible a todos los amantes del gaming, ofreciendo contenido actualizado y de alta calidad.</p>
+                    
+                    <h2>Nuestra Misión</h2>
+                    <p>Proveer a nuestros lectores con la información más actualizada, honesta y relevante sobre el mundo de los videojuegos. Creemos en la comunidad gaming como un espacio de inclusión y creatividad, y nos esforzamos por ser un referente en la industria.</p>
+                    
+                    <h2>Nuestra Visión</h2>
+                    <p>Convertirnos en el portal de referencia para todos los gamers de habla hispana, siendo reconocidos por nuestra calidad editorial, integridad y capacidad de conectar con nuestra audiencia.</p>
+                    
+                    <h2>Nuestros Valores</h2>
+                    <ul>
+                        <li><strong>Pasión:</strong> Amamos lo que hacemos y eso se refleja en nuestro contenido.</li>
+                        <li><strong>Integridad:</strong> Valoramos la transparencia y la honestidad en cada reseña y noticia que publicamos.</li>
+                        <li><strong>Innovación:</strong> Siempre buscamos nuevas formas de acercarnos a nuestra audiencia y mejorar nuestra plataforma.</li>
+                        <li><strong>Comunidad:</strong> Nos importa cada uno de nuestros lectores y sus opiniones.</li>
+                    </ul>
+                </div>
+          
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h3>Sobre GamerZone</h3>
+                <p>GamerZone es tu portal de confianza para estar al día con las últimas noticias, reseñas y productos del mundo gaming. Únete a nuestra comunidad y descubre todo lo que tenemos para ofrecer.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#popular-games">Juegos Populares</a></li>
+                    <li><a href="#news">Noticias</a></li>
+                    <li><a href="#reviews">Reseñas</a></li>
+                    <li><a href="#products">Productos</a></li>
+                    <li><a href="#faq">Preguntas Frecuentes</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact-form">
+                <h3>Contáctanos</h3>
+                <form action="enviar_mensaje.php" method="POST">
+                    <input type="text" name="name" placeholder="Nombre" required>
+                    <input type="email" name="email" placeholder="Correo Electrónico" required>
+                    <textarea name="message" placeholder="Mensaje" rows="3" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+            <div class="footer-section social">
+                <h3>Síguenos</h3>
+                <ul class="social-links">
+                    <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f">
+                        <img class="imgfaceboo" src="./img/facebook.png" alt="" srcset="">
+                    </i>                       
+                    </a></li>
+                    <li><a  href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter">
+                        <img class="imgfaceboo" src="./img/twiter.png" alt="" srcset="">
+                    </i></a></li>
+                    <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram">
+                        <img class="imgfaceboo" src="./img/instagram.png" alt="" srcset="">
+                    </i></a></li>
+                    <li><a href="https://www.google.com/intl/es-419/gmail/about/" target="_blank"><i class="fab fa-instagram">
+                        <img class="imgfaceboo" src="./img/google.png" alt="" srcset="">
+                    </i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 GamerZone. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/carrito.js"></script>
+</body>
+
+</html>
